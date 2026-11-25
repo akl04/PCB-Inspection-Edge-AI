@@ -1,0 +1,48 @@
+{
+  "inspection_id": "PCB-20261125T170912940963Z",
+  "test_case": "6445_b_001",
+  "original_filename": "6445_b_001.jpg",
+  "production_input_filename": "6445_b_001_20261125T170911522978Z_b24a8d1ca2.jpg",
+  "input_sha256": "3f460fff83dd24524a92156c4dcf451a775c0b83c873b02159e517dd5356836a",
+  "source_record_sha256": "8252974c00e0c400c96f8e573549f6b572ed801663fc94b83a9b6936c7566f9f",
+  "started_utc": "2026-11-25T17:09:11.523180+00:00",
+  "finished_utc": "2026-11-25T17:09:53.624350+00:00",
+  "collector_elapsed_seconds": 42.101170406000165,
+  "hardware_status": "MEASURED",
+  "matching_journal_entries": 5,
+  "journal_return_code": 0,
+  "files": {
+    "6445_b_001.jpg": {
+      "bytes": 7345,
+      "sha256": "3f460fff83dd24524a92156c4dcf451a775c0b83c873b02159e517dd5356836a"
+    },
+    "6445_b_001_advisory.json": {
+      "bytes": 615212,
+      "sha256": "9792a282bc012239a32f5f4a873f75f0c05eb501838b61badc68ce9317f6a466"
+    },
+    "6445_b_001_annotated.png": {
+      "bytes": 66373,
+      "sha256": "06ae505a889b68606decb6ff42177a5fa3f454204369f1b57679b4395b59a752"
+    },
+    "6445_b_001_hardware.json": {
+      "bytes": 406304,
+      "sha256": "ae4a3de7890d90951f53c93b8d3a8fec6df48be1837dacfd4ffcb70ec435c0a0"
+    },
+    "6445_b_001_inspection.log": {
+      "bytes": 1232,
+      "sha256": "158a8a501de635838e10aeff74dd4a0b7f7de55a6c4f1cab02c16c6b730498c7"
+    },
+    "6445_b_001_performance.json": {
+      "bytes": 626,
+      "sha256": "c3d856204062055f1a05661e27f5d043b290980fcc0c8b39a0f3fdb975daf3cb"
+    },
+    "6445_b_001_yolo.json": {
+      "bytes": 2515,
+      "sha256": "8252974c00e0c400c96f8e573549f6b572ed801663fc94b83a9b6936c7566f9f"
+    },
+    "6445_b_001_yolo_timing.json": {
+      "bytes": 461,
+      "sha256": "d84cd75d896fe47c31dd72fb91759123ce73f75ef5109a5f42ca233f2e321322"
+    }
+  }
+}

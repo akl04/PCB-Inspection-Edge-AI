@@ -1,0 +1,36 @@
+{
+  "inspection_id": "PCB-20261125T170854753268Z",
+  "created_at_utc": "2026-11-25T17:08:54.794006+00:00",
+  "status": "INSPECTION_COMPLETE",
+  "source_image": "/home/berry/pcb_ai/input/6417_b_001_20261125T170853463092Z_0751ac0756.jpg",
+  "annotated_image": "/home/berry/pcb_ai/auto_inspections/annotated_images/6417_b_001_20261125T170853463092Z_0751ac0756_annotated.png",
+  "model_weights": "/home/berry/pcb_ai/models/best.pt",
+  "device": "cpu",
+  "image_width": 300,
+  "image_height": 300,
+  "confidence_threshold": 0.25,
+  "inference_elapsed_seconds": 0.473,
+  "yolo_preprocess_ms": 6.6805940004996955,
+  "yolo_inference_ms": 463.7694509983703,
+  "yolo_postprocess_ms": 1.1266799992881715,
+  "total_detections": 1,
+  "detections": [
+    {
+      "detection_id": 1,
+      "class_id": 0,
+      "defect_class": "SH",
+      "confidence": 0.73002,
+      "bounding_box_xyxy": [
+        137.27,
+        121.34,
+        169.76,
+        154.47
+      ],
+      "location": "center region",
+      "severity": "NOT_ASSESSED",
+      "verification_status": "PENDING_HUMAN_REVIEW"
+    }
+  ],
+  "advisory_status": "NOT_GENERATED",
+  "yolo_json_generation_ms": 0.2748
+}

@@ -1,0 +1,96 @@
+{
+  "inspection_id": "PCB-20261125T170912940963Z",
+  "created_at_utc": "2026-11-25T17:09:12.972653+00:00",
+  "status": "INSPECTION_COMPLETE",
+  "source_image": "/home/berry/pcb_ai/input/6445_b_001_20261125T170911522978Z_b24a8d1ca2.jpg",
+  "annotated_image": "/home/berry/pcb_ai/auto_inspections/annotated_images/6445_b_001_20261125T170911522978Z_b24a8d1ca2_annotated.png",
+  "model_weights": "/home/berry/pcb_ai/models/best.pt",
+  "device": "cpu",
+  "image_width": 300,
+  "image_height": 300,
+  "confidence_threshold": 0.25,
+  "inference_elapsed_seconds": 0.442,
+  "yolo_preprocess_ms": 7.930198000394739,
+  "yolo_inference_ms": 431.9081779976841,
+  "yolo_postprocess_ms": 0.7407359989883844,
+  "total_detections": 5,
+  "detections": [
+    {
+      "detection_id": 1,
+      "class_id": 7,
+      "defect_class": "CFO",
+      "confidence": 0.717985,
+      "bounding_box_xyxy": [
+        121.43,
+        222.45,
+        176.89,
+        272.46
+      ],
+      "location": "bottom region",
+      "severity": "NOT_ASSESSED",
+      "verification_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "detection_id": 2,
+      "class_id": 7,
+      "defect_class": "CFO",
+      "confidence": 0.687927,
+      "bounding_box_xyxy": [
+        208.89,
+        229.17,
+        244.53,
+        265.15
+      ],
+      "location": "bottom-right region",
+      "severity": "NOT_ASSESSED",
+      "verification_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "detection_id": 3,
+      "class_id": 4,
+      "defect_class": "MB",
+      "confidence": 0.612703,
+      "bounding_box_xyxy": [
+        103.64,
+        107.66,
+        218.31,
+        184.01
+      ],
+      "location": "center region",
+      "severity": "NOT_ASSESSED",
+      "verification_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "detection_id": 4,
+      "class_id": 4,
+      "defect_class": "MB",
+      "confidence": 0.408837,
+      "bounding_box_xyxy": [
+        106.9,
+        161.56,
+        208.22,
+        184.27
+      ],
+      "location": "center region",
+      "severity": "NOT_ASSESSED",
+      "verification_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "detection_id": 5,
+      "class_id": 7,
+      "defect_class": "CFO",
+      "confidence": 0.29377,
+      "bounding_box_xyxy": [
+        99.85,
+        108.34,
+        218.34,
+        184.45
+      ],
+      "location": "center region",
+      "severity": "NOT_ASSESSED",
+      "verification_status": "PENDING_HUMAN_REVIEW"
+    }
+  ],
+  "advisory_status": "NOT_GENERATED",
+  "yolo_json_generation_ms": 0.37
+}

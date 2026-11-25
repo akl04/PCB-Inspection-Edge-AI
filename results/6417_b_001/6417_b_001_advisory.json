@@ -1,0 +1,3210 @@
+{
+    "inspection_id": "PCB-20261125T170854753268Z",
+    "created_at_utc": "2026-11-25T17:09:03.577985+00:00",
+    "status": "INTEGRATION_COMPLETE",
+    "advisory_status": "ALL_LLAMA_OUTPUTS_VALIDATED",
+    "platform": "Raspberry Pi 5 ARM64",
+    "source_record": "/home/berry/pcb_ai/auto_inspections/inspection_records/6417_b_001_20261125T170853463092Z_0751ac0756_inspection.json",
+    "source_record_sha256": "0896ef80adf251a9bd68b5f6f2566e01af4d57fcc724312d7aecaa0b0f60ffe9",
+    "source_image": "/home/berry/pcb_ai/input/6417_b_001_20261125T170853463092Z_0751ac0756.jpg",
+    "annotated_image": "/home/berry/pcb_ai/auto_inspections/annotated_images/6417_b_001_20261125T170853463092Z_0751ac0756_annotated.png",
+    "yolo_model": "/home/berry/pcb_ai/models/best.pt",
+    "llama_model": "/home/berry/pcb_ai/models/llama/pcb_llama_int4_ctx2048.pte",
+    "llama_runtime": "ExecuTorch",
+    "llama_advisory_method": "KNOWLEDGE_GROUNDED_ACTION_PRIORITIZATION",
+    "image_width": 300,
+    "image_height": 300,
+    "confidence_threshold": 0.25,
+    "total_detections": 1,
+    "total_advisories": 1,
+    "llama_validated_count": 1,
+    "knowledge_base_fallback_count": 0,
+    "llama_timing_sample_count": 1,
+    "yolo_inference_ms": 463.7694509983703,
+    "yolo_total_prediction_ms": 473.0,
+    "total_measured_llama_inference_ms": 7136.0,
+    "average_llama_inference_ms": 7136.0,
+    "advisory_pipeline_ms": 8255.77,
+    "detections": [
+        {
+            "detection_id": 1,
+            "class_id": 0,
+            "defect_class": "SH",
+            "confidence": 0.73002,
+            "bounding_box_xyxy": [
+                137.27,
+                121.34,
+                169.76,
+                154.47
+            ],
+            "location": "center region",
+            "severity": "NOT_ASSESSED",
+            "verification_status": "PENDING_HUMAN_REVIEW"
+        }
+    ],
+    "advisories": [
+        {
+            "detection_id": 1,
+            "yolo_label": "SH",
+            "confidence": 0.73002,
+            "bounding_box_xyxy": [
+                137.27,
+                121.34,
+                169.76,
+                154.47
+            ],
+            "verification_status": "PENDING_HUMAN_REVIEW",
+            "advisory": {
+                "defect": "Short Circuit",
+                "location": "Central PCB image region",
+                "severity": "Requires Further Assessment",
+                "possible_causes": [
+                    "Unintended copper bridging between adjacent conductors",
+                    "Incomplete etching or conductive contamination"
+                ],
+                "potential_impact": [
+                    "Unintended electrical connection between circuit nets",
+                    "Possible excessive current, malfunction, or component damage"
+                ],
+                "corrective_action": [
+                    "Verify isolation between affected conductors",
+                    "Inspect the suspected bridge against the PCB layout",
+                    "Assess approved rework or board rejection"
+                ]
+            },
+            "generation_status": "LLAMA_OUTPUT_VALIDATED",
+            "exact_match": null,
+            "selection_validated": true,
+            "validation_error": null,
+            "raw_llama_output": "B\nExplanation:",
+            "generated_advisory": {
+                "selected_option": "B",
+                "selected_action": "Verify isolation between affected conductors"
+            },
+            "runtime": "ExecuTorch",
+            "advisory_method": "LLAMA_ACTION_PRIORITIZATION",
+            "selected_option": "B",
+            "selected_action": "Verify isolation between affected conductors",
+            "prompt_processing_ms": 2798,
+            "token_generation_ms": 4338,
+            "llama_inference_ms": 7136.0,
+            "llama_request_ms": 8255.41,
+            "generated_tokens": 3,
+            "tokens_per_second": 0.691563,
+            "model_load_ms": 955,
+            "ttft_ms": 2798,
+            "server_timings": {
+                "prompt_ms": 2798,
+                "predicted_ms": 4338,
+                "inference_ms": 7136,
+                "model_load_ms": 955,
+                "ttft_ms": 2798,
+                "predicted_n": 3,
+                "predicted_per_second": 0.691563
+            },
+            "runtime_metrics": {
+                "prefill_token_per_sec": 16.7977,
+                "decode_token_per_sec": 0.691563,
+                "prompt_tokens": 47,
+                "generated_tokens": 3,
+                "model_load_start_ms": 1795626535415,
+                "model_load_end_ms": 1795626536370,
+                "inference_start_ms": 1795626536370,
+                "inference_end_ms": 1795626543506,
+                "model_execution_start_ms": 1795626542084,
+                "model_execution_end_ms": 1795626543505,
+                "prompt_eval_end_ms": 1795626539168,
+                "first_token_ms": 1795626539168,
+                "aggregate_sampling_time_ms": 2,
+                "aggregate_model_execution_time_ms": 7133,
+                "SCALING_FACTOR_UNITS_PER_SECOND": 1000
+            }
+        }
+    ],
+    "inspection_notice": "AI-assisted preliminary inspection. Detection confidence is not severity. Reference guidance requires qualified human review before corrective action.",
+    "performance": {
+        "yolo_inference_fps": 2.1562437927881413,
+        "complete_vision_fps": 1.903328064286809,
+        "effective_system_fps": 0.10754728375240405,
+        "effective_inspections_per_minute": 6.452837025144244,
+        "fps_definition": "Reciprocal latency, not sustained throughput",
+        "vision_total_processing_ms": 525.3955,
+        "complete_processing_seconds": 9.298235762998956,
+        "complete_processing_ms": 9298.235762998956,
+        "measurement_start": "YOLO processing start",
+        "measurement_end": "Integrated report preparation before monitoring lookup and JSON publication",
+        "includes_upload_wait": false,
+        "includes_final_report_save": false
+    },
+    "hardware_utilization": {
+        "status": "MEASURED",
+        "measurement_scope": "monitored_pmic_rails",
+        "whole_device_input_power": false,
+        "system_wide_measurement": true,
+        "requested_interval_seconds": 0.25,
+        "sampling_coverage_percent": 96.98323534538179,
+        "sample_count": 37,
+        "summary": {
+            "measurement_scope": "monitored_pmic_rails",
+            "whole_device_input_power": false,
+            "sample_count": 37,
+            "sampling_duration_seconds": 9.017729872997734,
+            "average_monitored_power_w": 3.7099930201213405,
+            "peak_sampled_monitored_power_w": 5.62088746410326,
+            "minimum_sampled_monitored_power_w": 1.83544534019453,
+            "estimated_monitored_energy_j": 33.455714886161296,
+            "estimated_monitored_energy_wh": 0.009293254135044804,
+            "peak_sampled_system_ram_used_gib": 4.9942169189453125,
+            "minimum_sampled_available_ram_gib": 2.8751068115234375,
+            "peak_sampled_cpu_temperature_c": 63.35,
+            "average_sampled_core_rail_power_w": 2.4083453665499714
+        },
+        "samples": [
+            {
+                "timestamp_utc": "2026-11-25T17:08:54.429630+00:00",
+                "monotonic_seconds": 28134.364452148002,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.715552,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.313745,
+                            "current_a": 0.06538731,
+                            "power_w": 0.21667687157595
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.796335,
+                            "current_a": 0.1942101,
+                            "power_w": 0.3488663999835
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.099999,
+                            "current_a": 0.2059212,
+                            "power_w": 0.22651311407879998
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6047613,
+                            "current_a": 0.0191178,
+                            "power_w": 0.01156170558114
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.100365,
+                            "current_a": 0.2108009,
+                            "power_w": 0.2319579323285
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.7996329,
+                            "current_a": 0.4098906,
+                            "power_w": 0.32776200916074
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.866031,
+                            "current_a": 3.74167,
+                            "power_w": 3.24040221177
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.299447,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.304942,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016141336728000002
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7964827,
+                            "current_a": 0.0034188,
+                            "power_w": 0.00272301505476
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.06386,
+                            "current_a": 0.0001221,
+                            "power_w": 0.000618297306
+                        }
+                    },
+                    "monitored_power_w": 4.6086956905121905,
+                    "core_rail_power_w": 3.24040221177,
+                    "external_5v_voltage_v": 5.09334
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 5.247039794921875,
+                    "used_ram_gib": 2.622283935546875,
+                    "ram_utilization_percent": 33.32286261643825,
+                    "swap_used_gib": 0.465087890625
+                },
+                "cpu_temperature_c": 60.05
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:54.679774+00:00",
+                "monotonic_seconds": 28134.6145602475,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.710912,
+                            "current_a": 0.00097593,
+                            "power_w": 0.00362159034816
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.318385,
+                            "current_a": 0.06538731,
+                            "power_w": 0.21698026869435003
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.796824,
+                            "current_a": 0.1903064,
+                            "power_w": 0.34194710687359997
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.099633,
+                            "current_a": 0.1912823,
+                            "power_w": 0.2103403293959
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.604395,
+                            "current_a": 0.0009804,
+                            "power_w": 0.000592548858
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.099999,
+                            "current_a": 0.2010416,
+                            "power_w": 0.22114555895839996
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8010981,
+                            "current_a": 0.3005864,
+                            "power_w": 0.24079919392583998
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8649564,
+                            "current_a": 4.2864,
+                            "power_w": 3.7075491129600002
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.297616,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.304942,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016141336728000002
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7970688,
+                            "current_a": 0.0034188,
+                            "power_w": 0.0027250188134400003
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.08262,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0012411758040000002
+                        }
+                    },
+                    "monitored_power_w": 4.94855603830449,
+                    "core_rail_power_w": 3.7075491129600002,
+                    "external_5v_voltage_v": 5.07994
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 5.25885009765625,
+                    "used_ram_gib": 2.6104736328125,
+                    "ram_utilization_percent": 33.17278234094206,
+                    "swap_used_gib": 0.465087890625
+                },
+                "cpu_temperature_c": 60.6
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:54.929437+00:00",
+                "monotonic_seconds": 28134.8644250055,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.709056,
+                            "current_a": 0.05074836,
+                            "power_w": 0.18822850914816
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.312817,
+                            "current_a": 0.06636324,
+                            "power_w": 0.21984926964708001
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.797312,
+                            "current_a": 0.1766433,
+                            "power_w": 0.3174831228096
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.102929,
+                            "current_a": 0.01268709,
+                            "power_w": 0.01399295948661
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6032961,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.101464,
+                            "current_a": 0.1981138,
+                            "power_w": 0.2182152186032
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8029296,
+                            "current_a": 0.279116,
+                            "power_w": 0.2241104982336
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8646878,
+                            "current_a": 0.75012,
+                            "power_w": 0.648619612536
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.299447,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.304942,
+                            "current_a": 0.0003663,
+                            "power_w": 0.0012106002546
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7973619,
+                            "current_a": 0.0039072,
+                            "power_w": 0.0031154524156800003
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.0786,
+                            "current_a": 0.0001221,
+                            "power_w": 0.0006200970600000001
+                        }
+                    },
+                    "monitored_power_w": 1.83544534019453,
+                    "core_rail_power_w": 0.648619612536,
+                    "external_5v_voltage_v": 5.092
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 5.2611541748046875,
+                    "used_ram_gib": 2.6081695556640625,
+                    "ram_utilization_percent": 33.143503114068764,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 60.05
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:55.183520+00:00",
+                "monotonic_seconds": 28135.116500409502,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.714624,
+                            "current_a": 0.05074836,
+                            "power_w": 0.18851107601664
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.313745,
+                            "current_a": 0.06538731,
+                            "power_w": 0.21667687157595
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.805126,
+                            "current_a": 0.1766433,
+                            "power_w": 0.3188634135558
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.104028,
+                            "current_a": 0.00390372,
+                            "power_w": 0.00430981618416
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6065928,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.102197,
+                            "current_a": 0.2000657,
+                            "power_w": 0.22051181434290004
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8003655,
+                            "current_a": 0.2820438,
+                            "power_w": 0.2257381270089
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8641506,
+                            "current_a": 0.7590499,
+                            "power_w": 0.65593342651494
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.298531,
+                            "current_a": 6.105e-05,
+                            "power_w": 0.00020137531755000002
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.304942,
+                            "current_a": 0.0007326,
+                            "power_w": 0.0024212005092
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7967758,
+                            "current_a": 0.0032967,
+                            "power_w": 0.0026267307798600002
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.08396,
+                            "current_a": 0.0001221,
+                            "power_w": 0.0006207515160000001
+                        }
+                    },
+                    "monitored_power_w": 1.8364146033219,
+                    "core_rail_power_w": 0.65593342651494,
+                    "external_5v_voltage_v": 5.08262
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 5.2600250244140625,
+                    "used_ram_gib": 2.6092987060546875,
+                    "ram_utilization_percent": 33.15785187425833,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 58.4
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:55.430815+00:00",
+                "monotonic_seconds": 28135.365199156,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.717408,
+                            "current_a": 0.04977243,
+                            "power_w": 0.18502442946144
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.304465,
+                            "current_a": 0.06343545,
+                            "power_w": 0.20962022428425
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.797312,
+                            "current_a": 0.1766433,
+                            "power_w": 0.3174831228096
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.099999,
+                            "current_a": 0.01659081,
+                            "power_w": 0.01824987440919
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6040287,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.102929,
+                            "current_a": 0.1981138,
+                            "power_w": 0.21850545532020002
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8029296,
+                            "current_a": 0.2888753,
+                            "power_w": 0.23194652907888
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8646878,
+                            "current_a": 1.89316,
+                            "power_w": 1.636992355448
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.299447,
+                            "current_a": 0.0001221,
+                            "power_w": 0.00040286247870000003
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.306773,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016150279332000003
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7967758,
+                            "current_a": 0.00311355,
+                            "power_w": 0.00248080129209
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.08262,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0012411758040000002
+                        }
+                    },
+                    "monitored_power_w": 2.82356185831955,
+                    "core_rail_power_w": 1.636992355448,
+                    "external_5v_voltage_v": 5.092
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 5.173828125,
+                    "used_ram_gib": 2.69549560546875,
+                    "ram_utilization_percent": 34.25320520278289,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 60.05
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:55.681389+00:00",
+                "monotonic_seconds": 28135.615534587,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.715552,
+                            "current_a": 0.04489278,
+                            "power_w": 0.16680145851456002
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.302609,
+                            "current_a": 0.06343545,
+                            "power_w": 0.20950248808905
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.796335,
+                            "current_a": 0.1961619,
+                            "power_w": 0.3523724866365
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.100732,
+                            "current_a": 0.1746915,
+                            "power_w": 0.19228852417800002
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6036624,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.102197,
+                            "current_a": 0.1990897,
+                            "power_w": 0.21943607007090002
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8007318,
+                            "current_a": 0.3708534,
+                            "power_w": 0.29695411051812
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8649564,
+                            "current_a": 1.82172,
+                            "power_w": 1.575708373008
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.300363,
+                            "current_a": 0.0001221,
+                            "power_w": 0.0004029743223
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.307689,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016154753076
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7967758,
+                            "current_a": 0.00311355,
+                            "power_w": 0.00248080129209
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.092,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0012434664
+                        }
+                    },
+                    "monitored_power_w": 3.01880622833712,
+                    "core_rail_power_w": 1.575708373008,
+                    "external_5v_voltage_v": 5.09602
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 3.942230224609375,
+                    "used_ram_gib": 3.927093505859375,
+                    "ram_utilization_percent": 49.903824526297015,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 60.6
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:55.930430+00:00",
+                "monotonic_seconds": 28135.8650918285,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.709056,
+                            "current_a": 0.04586871,
+                            "power_w": 0.17012961403776
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.298898,
+                            "current_a": 0.07221882,
+                            "power_w": 0.23824252086036
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.796335,
+                            "current_a": 0.1883545,
+                            "power_w": 0.3383477807575
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.101098,
+                            "current_a": 0.1483414,
+                            "power_w": 0.1633384188572
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6051276,
+                            "current_a": 0.014706,
+                            "power_w": 0.0088990064856
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.101464,
+                            "current_a": 0.1981138,
+                            "power_w": 0.2182152186032
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8029296,
+                            "current_a": 0.348407,
+                            "power_w": 0.2797462931472
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8649564,
+                            "current_a": 2.39324,
+                            "power_w": 2.0700482547359997
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.298531,
+                            "current_a": 0.0001221,
+                            "power_w": 0.00040275063510000005
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.305857,
+                            "current_a": 0.0007326,
+                            "power_w": 0.0024218708382000003
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7967758,
+                            "current_a": 0.0031746,
+                            "power_w": 0.0025294444546800003
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.10406,
+                            "current_a": 0.0002442,
+                            "power_w": 0.001246411452
+                        }
+                    },
+                    "monitored_power_w": 3.4935675848648,
+                    "core_rail_power_w": 2.0700482547359997,
+                    "external_5v_voltage_v": 5.092
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 3.4755401611328125,
+                    "used_ram_gib": 4.3937835693359375,
+                    "ram_utilization_percent": 55.834322234373424,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 57.85
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:56.184577+00:00",
+                "monotonic_seconds": 28136.1172021765,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.708128,
+                            "current_a": 0.04782057,
+                            "power_w": 0.17732479459296
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.310961,
+                            "current_a": 0.06441138,
+                            "power_w": 0.21326356713618
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.799266,
+                            "current_a": 0.1922582,
+                            "power_w": 0.3459236424812
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.10183,
+                            "current_a": 0.1600525,
+                            "power_w": 0.176350646075
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6025635,
+                            "current_a": 0.009804,
+                            "power_w": 0.0059075325540000004
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.104028,
+                            "current_a": 0.2010416,
+                            "power_w": 0.22195555556479998
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8029296,
+                            "current_a": 0.3552385,
+                            "power_w": 0.2852315067096
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8641506,
+                            "current_a": 1.89316,
+                            "power_w": 1.635975349896
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.298531,
+                            "current_a": 6.105e-05,
+                            "power_w": 0.00020137531755000002
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.305857,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016145805588000002
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7970688,
+                            "current_a": 0.0031746,
+                            "power_w": 0.00253037461248
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.09066,
+                            "current_a": 0.0001221,
+                            "power_w": 0.000621569586
+                        }
+                    },
+                    "monitored_power_w": 3.0669004950845697,
+                    "core_rail_power_w": 1.635975349896,
+                    "external_5v_voltage_v": 5.09066
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 3.2285308837890625,
+                    "used_ram_gib": 4.6407928466796875,
+                    "ram_utilization_percent": 58.973210476921764,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 57.85
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:56.437041+00:00",
+                "monotonic_seconds": 28136.369923364,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.712768,
+                            "current_a": 0.05172429,
+                            "power_w": 0.19204028873472
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.312817,
+                            "current_a": 0.06636324,
+                            "power_w": 0.21984926964708001
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.797312,
+                            "current_a": 0.1981138,
+                            "power_w": 0.35607231010560003
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.102929,
+                            "current_a": 0.1785952,
+                            "power_w": 0.19697782534080002
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6047613,
+                            "current_a": 0.0058824,
+                            "power_w": 0.00355744787112
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.10183,
+                            "current_a": 0.1981138,
+                            "power_w": 0.21828772825400003
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.802197,
+                            "current_a": 0.3591422,
+                            "power_w": 0.28810279541340006
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8644192,
+                            "current_a": 1.97353,
+                            "power_w": 1.7059572237760001
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.298531,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.306773,
+                            "current_a": 0.00054945,
+                            "power_w": 0.0018169064248500003
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7967758,
+                            "current_a": 0.00311355,
+                            "power_w": 0.00248080129209
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.07592,
+                            "current_a": 0.0001221,
+                            "power_w": 0.0006197698320000001
+                        }
+                    },
+                    "monitored_power_w": 3.18576236669166,
+                    "core_rail_power_w": 1.7059572237760001,
+                    "external_5v_voltage_v": 5.07056
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.9895782470703125,
+                    "used_ram_gib": 4.8797454833984375,
+                    "ram_utilization_percent": 62.009718376495954,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 56.75
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:56.686864+00:00",
+                "monotonic_seconds": 28136.619868381,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.709056,
+                            "current_a": 0.05465208,
+                            "power_w": 0.20270762523647998
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.308177,
+                            "current_a": 0.06245952,
+                            "power_w": 0.20662714749504
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.7978,
+                            "current_a": 0.1942101,
+                            "power_w": 0.34915091778
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.103296,
+                            "current_a": 0.1844508,
+                            "power_w": 0.20350382983680002
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6036624,
+                            "current_a": 0.007353,
+                            "power_w": 0.0044387296272
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.104028,
+                            "current_a": 0.1990897,
+                            "power_w": 0.2198006033116
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.7981678,
+                            "current_a": 0.3581663,
+                            "power_w": 0.28587680770514
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.865225,
+                            "current_a": 1.81279,
+                            "power_w": 1.56847122775
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.300363,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.307689,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016154753076
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7964827,
+                            "current_a": 0.00335775,
+                            "power_w": 0.002674389785925
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.092,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0012434664
+                        }
+                    },
+                    "monitored_power_w": 3.046110220235785,
+                    "core_rail_power_w": 1.56847122775,
+                    "external_5v_voltage_v": 5.10272
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.8754119873046875,
+                    "used_ram_gib": 4.9939117431640625,
+                    "ram_utilization_percent": 63.46049437295918,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 58.4
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:56.937692+00:00",
+                "monotonic_seconds": 28136.8703337935,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.720192,
+                            "current_a": 0.05074836,
+                            "power_w": 0.18879364288512
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.305393,
+                            "current_a": 0.0683151,
+                            "power_w": 0.22580825333430002
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.795358,
+                            "current_a": 0.1932341,
+                            "power_w": 0.3469243873078
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.103662,
+                            "current_a": 0.1746915,
+                            "power_w": 0.19280037027299998
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6018309,
+                            "current_a": 0.0078432,
+                            "power_w": 0.004720280114879999
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.101464,
+                            "current_a": 0.1990897,
+                            "power_w": 0.21929013732080002
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8007318,
+                            "current_a": 0.3679256,
+                            "power_w": 0.29460972795408
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8646878,
+                            "current_a": 1.90209,
+                            "power_w": 1.644714017502
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.298531,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0008055012702000001
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.307689,
+                            "current_a": 0.00018315,
+                            "power_w": 0.00060580324035
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7967758,
+                            "current_a": 0.0032967,
+                            "power_w": 0.0026267307798600002
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.08128,
+                            "current_a": 0.0002442,
+                            "power_w": 0.001240848576
+                        }
+                    },
+                    "monitored_power_w": 3.12293970055839,
+                    "core_rail_power_w": 1.644714017502,
+                    "external_5v_voltage_v": 5.061179
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.875335693359375,
+                    "used_ram_gib": 4.993988037109375,
+                    "ram_utilization_percent": 63.4614638837828,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 58.4
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:57.190875+00:00",
+                "monotonic_seconds": 28137.1228484175,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.722976,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.314673,
+                            "current_a": 0.06733918,
+                            "power_w": 0.22320736178814
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.798777,
+                            "current_a": 0.1922582,
+                            "power_w": 0.3458296282214
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.103662,
+                            "current_a": 0.195186,
+                            "power_w": 0.215419371132
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6047613,
+                            "current_a": 0.0112746,
+                            "power_w": 0.006818441752979999
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.102929,
+                            "current_a": 0.1990897,
+                            "power_w": 0.2195818037313
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8029296,
+                            "current_a": 0.3825646,
+                            "power_w": 0.30717244125216
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8636134,
+                            "current_a": 3.06299,
+                            "power_w": 2.645239208066
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.298531,
+                            "current_a": 0.0001221,
+                            "power_w": 0.00040275063510000005
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.305857,
+                            "current_a": 0.0007326,
+                            "power_w": 0.0024218708382000003
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7970688,
+                            "current_a": 0.0031746,
+                            "power_w": 0.00253037461248
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.05448,
+                            "current_a": 0.0001221,
+                            "power_w": 0.000617152008
+                        }
+                    },
+                    "monitored_power_w": 3.9692404040377602,
+                    "core_rail_power_w": 2.645239208066,
+                    "external_5v_voltage_v": 5.09066
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.8751068115234375,
+                    "used_ram_gib": 4.9942169189453125,
+                    "ram_utilization_percent": 63.46437241625365,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 58.95
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:57.438558+00:00",
+                "monotonic_seconds": 28137.3717305145,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.712768,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.314673,
+                            "current_a": 0.07026696,
+                            "power_w": 0.23291199510408
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.812941,
+                            "current_a": 0.1912823,
+                            "power_w": 0.3467835242443
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.099999,
+                            "current_a": 0.1824989,
+                            "power_w": 0.2007486075011
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6047613,
+                            "current_a": 0.0107844,
+                            "power_w": 0.0065219877637199995
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.101098,
+                            "current_a": 0.2205602,
+                            "power_w": 0.2428583950996
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.7992666,
+                            "current_a": 0.3825646,
+                            "power_w": 0.30577110712236
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8646878,
+                            "current_a": 2.96476,
+                            "power_w": 2.563591801928
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.298531,
+                            "current_a": 0.0001221,
+                            "power_w": 0.00040275063510000005
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.304942,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016141336728000002
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7967758,
+                            "current_a": 0.0034188,
+                            "power_w": 0.00272401710504
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.09736,
+                            "current_a": 0.0002442,
+                            "power_w": 0.001244775312
+                        }
+                    },
+                    "monitored_power_w": 3.9051730954881,
+                    "core_rail_power_w": 2.563591801928,
+                    "external_5v_voltage_v": 5.09736
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.8751373291015625,
+                    "used_ram_gib": 4.9941864013671875,
+                    "ram_utilization_percent": 63.46398461192421,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 60.05
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:57.689941+00:00",
+                "monotonic_seconds": 28137.622489980997,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.710912,
+                            "current_a": 0.00292779,
+                            "power_w": 0.01086477104448
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.305393,
+                            "current_a": 0.06636324,
+                            "power_w": 0.21935658895332003
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.795847,
+                            "current_a": 0.1912823,
+                            "power_w": 0.34351374460809997
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.103662,
+                            "current_a": 0.1737155,
+                            "power_w": 0.19172319616099998
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6029298,
+                            "current_a": 0.0058824,
+                            "power_w": 0.00354667425552
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.099999,
+                            "current_a": 0.1981138,
+                            "power_w": 0.2179249818862
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.7996329,
+                            "current_a": 0.3728053,
+                            "power_w": 0.29810738317437
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8668368,
+                            "current_a": 3.26838,
+                            "power_w": 2.833152060384
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.299447,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0008057249574000001
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.305857,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016145805588000002
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7967758,
+                            "current_a": 0.00311355,
+                            "power_w": 0.00248080129209
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.0652,
+                            "current_a": 0.0001221,
+                            "power_w": 0.00061846092
+                        }
+                    },
+                    "monitored_power_w": 4.12370896819528,
+                    "core_rail_power_w": 2.833152060384,
+                    "external_5v_voltage_v": 5.08128
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.8798065185546875,
+                    "used_ram_gib": 4.9895172119140625,
+                    "ram_utilization_percent": 63.404650549518735,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 59.5
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:57.938974+00:00",
+                "monotonic_seconds": 28137.872058629502,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.710912,
+                            "current_a": 0.00097593,
+                            "power_w": 0.00362159034816
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.319313,
+                            "current_a": 0.06441138,
+                            "power_w": 0.21380153098194002
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.796824,
+                            "current_a": 0.1854267,
+                            "power_w": 0.3331791448008
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.108058,
+                            "current_a": 0.1229672,
+                            "power_w": 0.1362547896976
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6018309,
+                            "current_a": 0.0112746,
+                            "power_w": 0.006785402665139999
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.102929,
+                            "current_a": 0.1971379,
+                            "power_w": 0.21742910690910003
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.7999992,
+                            "current_a": 0.348407,
+                            "power_w": 0.27872532127440003
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.865225,
+                            "current_a": 2.45575,
+                            "power_w": 2.12477629375
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.298531,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.306773,
+                            "current_a": 0.00054945,
+                            "power_w": 0.0018169064248500003
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7964827,
+                            "current_a": 0.00311355,
+                            "power_w": 0.002479888710585
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.03706,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0012300500520000001
+                        }
+                    },
+                    "monitored_power_w": 3.3201000256145754,
+                    "core_rail_power_w": 2.12477629375,
+                    "external_5v_voltage_v": 5.1121
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.8802642822265625,
+                    "used_ram_gib": 4.9890594482421875,
+                    "ram_utilization_percent": 63.39883348457702,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 60.05
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:58.196108+00:00",
+                "monotonic_seconds": 28138.125709405,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.726687,
+                            "current_a": 0.00097593,
+                            "power_w": 0.00363698564391
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.315601,
+                            "current_a": 0.06636324,
+                            "power_w": 0.22003402490724003
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.799266,
+                            "current_a": 0.1942101,
+                            "power_w": 0.3494356297866
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.105127,
+                            "current_a": 0.2147046,
+                            "power_w": 0.2372758504842
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.604395,
+                            "current_a": 0.019608,
+                            "power_w": 0.01185097716
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.10183,
+                            "current_a": 0.2205602,
+                            "power_w": 0.24301984516600003
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.7989003,
+                            "current_a": 0.4098906,
+                            "power_w": 0.32746172330718
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8644192,
+                            "current_a": 3.67916,
+                            "power_w": 3.1803365438720004
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.297616,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.307689,
+                            "current_a": 0.00042735,
+                            "power_w": 0.00141354089415
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7958966,
+                            "current_a": 0.00311355,
+                            "power_w": 0.00247806385893
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.05314,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0012339767880000002
+                        }
+                    },
+                    "monitored_power_w": 4.5781771618682106,
+                    "core_rail_power_w": 3.1803365438720004,
+                    "external_5v_voltage_v": 5.13622
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.8805389404296875,
+                    "used_ram_gib": 4.9887847900390625,
+                    "ram_utilization_percent": 63.395343245612,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 61.15
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:58.440036+00:00",
+                "monotonic_seconds": 28138.372746845,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.699776,
+                            "current_a": 0.00195186,
+                            "power_w": 0.00722144478336
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.300754,
+                            "current_a": 0.06636324,
+                            "power_w": 0.21904872988296
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.803173,
+                            "current_a": 0.1932341,
+                            "power_w": 0.34843451179929996
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.10183,
+                            "current_a": 0.1590766,
+                            "power_w": 0.17527537017800002
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6021972,
+                            "current_a": 0.0088236,
+                            "power_w": 0.005313547213919999
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.106226,
+                            "current_a": 0.2000657,
+                            "power_w": 0.2213178790482
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8029296,
+                            "current_a": 0.3796368,
+                            "power_w": 0.30482162396928003
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8636134,
+                            "current_a": 3.09871,
+                            "power_w": 2.676087478714
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.2967,
+                            "current_a": 0.0001221,
+                            "power_w": 0.00040252707000000006
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.304942,
+                            "current_a": 0.0007326,
+                            "power_w": 0.0024212005092
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7970688,
+                            "current_a": 0.0034188,
+                            "power_w": 0.0027250188134400003
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.05716,
+                            "current_a": 0.0002442,
+                            "power_w": 0.001234958472
+                        }
+                    },
+                    "monitored_power_w": 3.96430429045366,
+                    "core_rail_power_w": 2.676087478714,
+                    "external_5v_voltage_v": 5.07994
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.8812408447265625,
+                    "used_ram_gib": 4.9880828857421875,
+                    "ram_utilization_percent": 63.3864237460347,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 60.6
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:58.689658+00:00",
+                "monotonic_seconds": 28138.6226100295,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.7072,
+                            "current_a": 0.00292779,
+                            "power_w": 0.010853903088
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.314673,
+                            "current_a": 0.06245952,
+                            "power_w": 0.20703288453695998
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.797312,
+                            "current_a": 0.181523,
+                            "power_w": 0.326253466176
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.106592,
+                            "current_a": 0.1990897,
+                            "power_w": 0.22031106930240002
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6051276,
+                            "current_a": 0.0151962,
+                            "power_w": 0.00919564003512
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.101464,
+                            "current_a": 0.1990897,
+                            "power_w": 0.21929013732080002
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8003655,
+                            "current_a": 0.375733,
+                            "power_w": 0.30072373041149997
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8641506,
+                            "current_a": 5.0008,
+                            "power_w": 4.3214443204799995
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.297616,
+                            "current_a": 0.0001221,
+                            "power_w": 0.00040263891360000004
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.304026,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016136862984
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7970688,
+                            "current_a": 0.0031746,
+                            "power_w": 0.00253037461248
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.05984,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0012356129280000003
+                        }
+                    },
+                    "monitored_power_w": 5.62088746410326,
+                    "core_rail_power_w": 4.3214443204799995,
+                    "external_5v_voltage_v": 5.03706
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.8803253173828125,
+                    "used_ram_gib": 4.9889984130859375,
+                    "ram_utilization_percent": 63.39805787591813,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 62.25
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:58.939703+00:00",
+                "monotonic_seconds": 28138.8735219025,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.71184,
+                            "current_a": 0.00097593,
+                            "power_w": 0.0036224960112
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.314673,
+                            "current_a": 0.06733918,
+                            "power_w": 0.22320736178814
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.796824,
+                            "current_a": 0.1971379,
+                            "power_w": 0.3542221100296
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.098534,
+                            "current_a": 0.1903064,
+                            "power_w": 0.20905805081759996
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6036624,
+                            "current_a": 0.0083334,
+                            "power_w": 0.00503056024416
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.10183,
+                            "current_a": 0.1990897,
+                            "power_w": 0.21936300415100002
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8007318,
+                            "current_a": 0.3815886,
+                            "power_w": 0.30555012653748
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8641506,
+                            "current_a": 4.42035,
+                            "power_w": 3.81984810471
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.297616,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.304942,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016141336728000002
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7970688,
+                            "current_a": 0.0039072,
+                            "power_w": 0.0031143072153600004
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.10138,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0012457569960000001
+                        }
+                    },
+                    "monitored_power_w": 5.14587601217334,
+                    "core_rail_power_w": 3.81984810471,
+                    "external_5v_voltage_v": 5.11344
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.880340576171875,
+                    "used_ram_gib": 4.988983154296875,
+                    "ram_utilization_percent": 63.3978639737534,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 62.25
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:59.196733+00:00",
+                "monotonic_seconds": 28139.1271506405,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.71184,
+                            "current_a": 0.04586871,
+                            "power_w": 0.1702573125264
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.310961,
+                            "current_a": 0.0712429,
+                            "power_w": 0.23588246342689997
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.796824,
+                            "current_a": 0.1990897,
+                            "power_w": 0.3577291511128
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.100365,
+                            "current_a": 0.1756674,
+                            "power_w": 0.193298258601
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6029298,
+                            "current_a": 0.0068628,
+                            "power_w": 0.004137786631439999
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.102197,
+                            "current_a": 0.1981138,
+                            "power_w": 0.21836043601860003
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.7999992,
+                            "current_a": 0.3649978,
+                            "power_w": 0.29199794800176
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8646878,
+                            "current_a": 2.4111,
+                            "power_w": 2.08484875458
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.298531,
+                            "current_a": 0.0001221,
+                            "power_w": 0.00040275063510000005
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.305857,
+                            "current_a": 0.0007326,
+                            "power_w": 0.0024218708382000003
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7970688,
+                            "current_a": 0.0032967,
+                            "power_w": 0.00262769671296
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.0853,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0012418302600000002
+                        }
+                    },
+                    "monitored_power_w": 3.5632062593451597,
+                    "core_rail_power_w": 2.08484875458,
+                    "external_5v_voltage_v": 5.09468
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.881866455078125,
+                    "used_ram_gib": 4.987457275390625,
+                    "ram_utilization_percent": 63.37847375728103,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 63.35
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:59.442714+00:00",
+                "monotonic_seconds": 28139.3756379895,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.710912,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.310961,
+                            "current_a": 0.0683151,
+                            "power_w": 0.2261886318111
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.796335,
+                            "current_a": 0.1903064,
+                            "power_w": 0.34185404704399996
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.107691,
+                            "current_a": 0.1746915,
+                            "power_w": 0.1935042023265
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6018309,
+                            "current_a": 0.0200982,
+                            "power_w": 0.012095717794379998
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.101098,
+                            "current_a": 0.1981138,
+                            "power_w": 0.21814270895239998
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8010981,
+                            "current_a": 0.3835405,
+                            "power_w": 0.30725356582305
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8644192,
+                            "current_a": 3.35768,
+                            "power_w": 2.9024430594560005
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.297616,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.304026,
+                            "current_a": 0.00018315,
+                            "power_w": 0.0006051323619
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7970688,
+                            "current_a": 0.0034188,
+                            "power_w": 0.0027250188134400003
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.0719,
+                            "current_a": 0.0001221,
+                            "power_w": 0.0006192789900000001
+                        }
+                    },
+                    "monitored_power_w": 4.20543136337277,
+                    "core_rail_power_w": 2.9024430594560005,
+                    "external_5v_voltage_v": 5.08262
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.8837127685546875,
+                    "used_ram_gib": 4.9856109619140625,
+                    "ram_utilization_percent": 63.35501159534945,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 62.25
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:59.695405+00:00",
+                "monotonic_seconds": 28139.6270553415,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.715552,
+                            "current_a": 0.00390372,
+                            "power_w": 0.01450447465344
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.318385,
+                            "current_a": 0.06538731,
+                            "power_w": 0.21698026869435003
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.796824,
+                            "current_a": 0.1932341,
+                            "power_w": 0.34720766849839996
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.104394,
+                            "current_a": 0.2039694,
+                            "power_w": 0.22526258154360002
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6036624,
+                            "current_a": 0.0068628,
+                            "power_w": 0.00414281431872
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.101464,
+                            "current_a": 0.1971379,
+                            "power_w": 0.21714029988560002
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.7999992,
+                            "current_a": 0.3796368,
+                            "power_w": 0.30370913629056
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8646878,
+                            "current_a": 3.25052,
+                            "power_w": 2.810684987656
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.298531,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.305857,
+                            "current_a": 0.00054945,
+                            "power_w": 0.0018164031286500002
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7964827,
+                            "current_a": 0.0034188,
+                            "power_w": 0.00272301505476
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.07056,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0012382307520000001
+                        }
+                    },
+                    "monitored_power_w": 4.1454098804760795,
+                    "core_rail_power_w": 2.810684987656,
+                    "external_5v_voltage_v": 5.10138
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.8837432861328125,
+                    "used_ram_gib": 4.9855804443359375,
+                    "ram_utilization_percent": 63.35462379102,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 58.95
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:08:59.940227+00:00",
+                "monotonic_seconds": 28139.8745113255,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.71184,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.314673,
+                            "current_a": 0.06636324,
+                            "power_w": 0.21997243982052
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.796335,
+                            "current_a": 0.195186,
+                            "power_w": 0.35061944331
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.104761,
+                            "current_a": 0.1102801,
+                            "power_w": 0.12183315355610001
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6032961,
+                            "current_a": 0.0063726,
+                            "power_w": 0.00384456472686
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.102929,
+                            "current_a": 0.2000657,
+                            "power_w": 0.2206582624353
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8010981,
+                            "current_a": 0.3659738,
+                            "power_w": 0.29318091582978
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.866031,
+                            "current_a": 3.2148,
+                            "power_w": 2.7841164588
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.299447,
+                            "current_a": 6.105e-05,
+                            "power_w": 0.00020143123935000001
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.304942,
+                            "current_a": 0.00054945,
+                            "power_w": 0.0018159003819000002
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7964827,
+                            "current_a": 0.00323565,
+                            "power_w": 0.002577139248255
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.07592,
+                            "current_a": 0.0001221,
+                            "power_w": 0.0006197698320000001
+                        }
+                    },
+                    "monitored_power_w": 3.9994394791800647,
+                    "core_rail_power_w": 2.7841164588,
+                    "external_5v_voltage_v": 5.11746
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.89178466796875,
+                    "used_ram_gib": 4.9775390625,
+                    "ram_utilization_percent": 63.25243735021058,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 58.4
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:09:00.200128+00:00",
+                "monotonic_seconds": 28140.129523787997,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.71184,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.316529,
+                            "current_a": 0.06245952,
+                            "power_w": 0.20714880940608
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.798777,
+                            "current_a": 0.195186,
+                            "power_w": 0.351096087522
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.103662,
+                            "current_a": 0.2127527,
+                            "power_w": 0.23480707038739998
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6032961,
+                            "current_a": 0.0142158,
+                            "power_w": 0.00857633669838
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.104394,
+                            "current_a": 0.1981138,
+                            "power_w": 0.21879569203720003
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8010981,
+                            "current_a": 0.3786608,
+                            "power_w": 0.30334444742448
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.865225,
+                            "current_a": 3.00941,
+                            "power_w": 2.60381676725
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.299447,
+                            "current_a": 6.105e-05,
+                            "power_w": 0.00020143123935000001
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.306773,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016150279332000003
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.797655,
+                            "current_a": 0.0032967,
+                            "power_w": 0.0026296292385
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.0853,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0012418302600000002
+                        }
+                    },
+                    "monitored_power_w": 3.93327312939659,
+                    "core_rail_power_w": 2.60381676725,
+                    "external_5v_voltage_v": 5.08128
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.89202880859375,
+                    "used_ram_gib": 4.977294921875,
+                    "ram_utilization_percent": 63.249334915575,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 58.95
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:09:00.448095+00:00",
+                "monotonic_seconds": 28140.3785649675,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.726687,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.305393,
+                            "current_a": 0.06343545,
+                            "power_w": 0.20967909238185
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.798289,
+                            "current_a": 0.1942101,
+                            "power_w": 0.3492458865189
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.100365,
+                            "current_a": 0.1805471,
+                            "power_w": 0.1986677096915
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6040287,
+                            "current_a": 0.012255,
+                            "power_w": 0.0074023717184999996
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.100732,
+                            "current_a": 0.250814,
+                            "power_w": 0.276078995848
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8018308,
+                            "current_a": 0.3649978,
+                            "power_w": 0.29266647797224
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.866031,
+                            "current_a": 3.35768,
+                            "power_w": 2.90785496808
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.300363,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.306773,
+                            "current_a": 0.00054945,
+                            "power_w": 0.0018169064248500003
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7967758,
+                            "current_a": 0.00323565,
+                            "power_w": 0.00257808761727
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.08932,
+                            "current_a": 0.0002442,
+                            "power_w": 0.001242811944
+                        }
+                    },
+                    "monitored_power_w": 4.24723330819711,
+                    "core_rail_power_w": 2.90785496808,
+                    "external_5v_voltage_v": 5.08664
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.8913726806640625,
+                    "used_ram_gib": 4.9779510498046875,
+                    "ram_utilization_percent": 63.25767270865812,
+                    "swap_used_gib": 0.4648895263671875
+                },
+                "cpu_temperature_c": 58.95
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:09:00.705956+00:00",
+                "monotonic_seconds": 28140.633164404,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.71184,
+                            "current_a": 0.00097593,
+                            "power_w": 0.0036224960112
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.314673,
+                            "current_a": 0.06538731,
+                            "power_w": 0.21673755099963002
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.798289,
+                            "current_a": 0.1922582,
+                            "power_w": 0.3457358062198
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.106226,
+                            "current_a": 0.1551729,
+                            "power_w": 0.17165629647539998
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6003657,
+                            "current_a": 0.0083334,
+                            "power_w": 0.005003087524379999
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.104761,
+                            "current_a": 0.2000657,
+                            "power_w": 0.22102478279770005
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8010981,
+                            "current_a": 0.3679256,
+                            "power_w": 0.29474449910136
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8638819,
+                            "current_a": 2.43789,
+                            "power_w": 2.106049045191
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.300363,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0008059486446
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.307689,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016154753076
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7970688,
+                            "current_a": 0.00335775,
+                            "power_w": 0.0026763577632
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.08128,
+                            "current_a": 0.0001221,
+                            "power_w": 0.000620424288
+                        }
+                    },
+                    "monitored_power_w": 3.37029177032387,
+                    "core_rail_power_w": 2.106049045191,
+                    "external_5v_voltage_v": 5.09602
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.890472412109375,
+                    "used_ram_gib": 4.978851318359375,
+                    "ram_utilization_percent": 63.26911293637682,
+                    "swap_used_gib": 0.464874267578125
+                },
+                "cpu_temperature_c": 57.85
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:09:00.946581+00:00",
+                "monotonic_seconds": 28140.879555569998,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.726687,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.300754,
+                            "current_a": 0.06636324,
+                            "power_w": 0.21904872988296
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.798289,
+                            "current_a": 0.1971379,
+                            "power_w": 0.3545109170531
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.104761,
+                            "current_a": 0.1922582,
+                            "power_w": 0.2123993612902
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6032961,
+                            "current_a": 0.0068628,
+                            "power_w": 0.00414030047508
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.104761,
+                            "current_a": 0.2098249,
+                            "power_w": 0.23180636634890003
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.7999992,
+                            "current_a": 0.3513348,
+                            "power_w": 0.28106755893216
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8646878,
+                            "current_a": 2.75044,
+                            "power_w": 2.378271912632
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.299447,
+                            "current_a": 0.0001221,
+                            "power_w": 0.00040286247870000003
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.304942,
+                            "current_a": 0.0007326,
+                            "power_w": 0.0024212005092
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7967758,
+                            "current_a": 0.00299145,
+                            "power_w": 0.00238351496691
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.08262,
+                            "current_a": 0.0001221,
+                            "power_w": 0.0006205879020000001
+                        }
+                    },
+                    "monitored_power_w": 3.68707331247121,
+                    "core_rail_power_w": 2.378271912632,
+                    "external_5v_voltage_v": 5.092
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.898468017578125,
+                    "used_ram_gib": 4.970855712890625,
+                    "ram_utilization_percent": 63.16750820206157,
+                    "swap_used_gib": 0.464874267578125
+                },
+                "cpu_temperature_c": 57.85
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:09:01.198757+00:00",
+                "monotonic_seconds": 28141.130684201,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.717408,
+                            "current_a": 0.00097593,
+                            "power_w": 0.0036279299894399998
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.301682,
+                            "current_a": 0.08002626,
+                            "power_w": 0.26422126216932
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.796335,
+                            "current_a": 0.1912823,
+                            "power_w": 0.34360709037049997
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.101098,
+                            "current_a": 0.1688359,
+                            "power_w": 0.1859048718182
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.604395,
+                            "current_a": 0.007353,
+                            "power_w": 0.004444116435
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.101464,
+                            "current_a": 0.1971379,
+                            "power_w": 0.21714029988560002
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8018308,
+                            "current_a": 0.3640219,
+                            "power_w": 0.29188397129452
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8636134,
+                            "current_a": 2.13427,
+                            "power_w": 1.843184171218
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.300363,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.304942,
+                            "current_a": 0.0007326,
+                            "power_w": 0.0024212005092
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7970688,
+                            "current_a": 0.0031746,
+                            "power_w": 0.00253037461248
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.06922,
+                            "current_a": 0.0001221,
+                            "power_w": 0.0006189517620000001
+                        }
+                    },
+                    "monitored_power_w": 3.1595842400642598,
+                    "core_rail_power_w": 1.843184171218,
+                    "external_5v_voltage_v": 5.08128
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.9013671875,
+                    "used_ram_gib": 4.96795654296875,
+                    "ram_utilization_percent": 63.13066679076405,
+                    "swap_used_gib": 0.464874267578125
+                },
+                "cpu_temperature_c": 58.95
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:09:01.445839+00:00",
+                "monotonic_seconds": 28141.379283105,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.710912,
+                            "current_a": 0.00390372,
+                            "power_w": 0.01448636139264
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.300754,
+                            "current_a": 0.06636324,
+                            "power_w": 0.21904872988296
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.798289,
+                            "current_a": 0.195186,
+                            "power_w": 0.351000836754
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.100365,
+                            "current_a": 0.1590766,
+                            "power_w": 0.17504232295900002
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6032961,
+                            "current_a": 0.0053922,
+                            "power_w": 0.00325309323042
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.099999,
+                            "current_a": 0.1990897,
+                            "power_w": 0.2189984709103
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.802197,
+                            "current_a": 0.3493829,
+                            "power_w": 0.2802739142313
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8646878,
+                            "current_a": 1.98246,
+                            "power_w": 1.7142089759880001
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.297616,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0008052778272000001
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.304942,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016141336728000002
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7967758,
+                            "current_a": 0.0034188,
+                            "power_w": 0.00272401710504
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.09736,
+                            "current_a": 0.0001221,
+                            "power_w": 0.000622387656
+                        }
+                    },
+                    "monitored_power_w": 2.9820785216096604,
+                    "core_rail_power_w": 1.7142089759880001,
+                    "external_5v_voltage_v": 5.08128
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.901153564453125,
+                    "used_ram_gib": 4.968170166015625,
+                    "ram_utilization_percent": 63.13338142107018,
+                    "swap_used_gib": 0.464874267578125
+                },
+                "cpu_temperature_c": 57.85
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:09:01.700010+00:00",
+                "monotonic_seconds": 28141.6314760175,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.710912,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.308177,
+                            "current_a": 0.0683151,
+                            "power_w": 0.22599844257270002
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.797312,
+                            "current_a": 0.1981138,
+                            "power_w": 0.35607231010560003
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.106226,
+                            "current_a": 0.1746915,
+                            "power_w": 0.19324827927899998
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6047613,
+                            "current_a": 0.007353,
+                            "power_w": 0.004446809838899999
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.101464,
+                            "current_a": 0.2195843,
+                            "power_w": 0.24186420141520001
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8018308,
+                            "current_a": 0.3640219,
+                            "power_w": 0.29188397129452
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8649564,
+                            "current_a": 1.94674,
+                            "power_w": 1.6838452221359999
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.298531,
+                            "current_a": 0.0001221,
+                            "power_w": 0.00040275063510000005
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.305857,
+                            "current_a": 0.0007326,
+                            "power_w": 0.0024218708382000003
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7967758,
+                            "current_a": 0.00311355,
+                            "power_w": 0.00248080129209
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.0786,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0012401941200000002
+                        }
+                    },
+                    "monitored_power_w": 3.00390485352731,
+                    "core_rail_power_w": 1.6838452221359999,
+                    "external_5v_voltage_v": 5.07458
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.9007568359375,
+                    "used_ram_gib": 4.96856689453125,
+                    "ram_utilization_percent": 63.138422877353,
+                    "swap_used_gib": 0.464874267578125
+                },
+                "cpu_temperature_c": 58.4
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:09:01.950365+00:00",
+                "monotonic_seconds": 28141.881729422,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.71184,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.301682,
+                            "current_a": 0.06636324,
+                            "power_w": 0.21911031496968
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.796335,
+                            "current_a": 0.1854267,
+                            "power_w": 0.3330884711445
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.101464,
+                            "current_a": 0.1385821,
+                            "power_w": 0.1526431941944
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6032961,
+                            "current_a": 0.0093138,
+                            "power_w": 0.005618979216180001
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.102929,
+                            "current_a": 0.1981138,
+                            "power_w": 0.21850545532020002
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.7996329,
+                            "current_a": 0.3679256,
+                            "power_w": 0.29420541451224
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8646878,
+                            "current_a": 2.68793,
+                            "power_w": 2.3242202782540002
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.297616,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.307689,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016154753076
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7964827,
+                            "current_a": 0.0034188,
+                            "power_w": 0.00272301505476
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.07592,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0012395396640000002
+                        }
+                    },
+                    "monitored_power_w": 3.55297013763756,
+                    "core_rail_power_w": 2.3242202782540002,
+                    "external_5v_voltage_v": 5.07994
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.910614013671875,
+                    "used_ram_gib": 4.958709716796875,
+                    "ram_utilization_percent": 63.01316207894145,
+                    "swap_used_gib": 0.464874267578125
+                },
+                "cpu_temperature_c": 60.05
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:09:02.199155+00:00",
+                "monotonic_seconds": 28142.1311791735,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.71184,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.308177,
+                            "current_a": 0.06636324,
+                            "power_w": 0.21954134421348
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.796824,
+                            "current_a": 0.1883545,
+                            "power_w": 0.338439886108
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.104394,
+                            "current_a": 0.1424858,
+                            "power_w": 0.1573604626052
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6029298,
+                            "current_a": 0.007353,
+                            "power_w": 0.0044333428194
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.104394,
+                            "current_a": 0.1981138,
+                            "power_w": 0.21879569203720003
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.798534,
+                            "current_a": 0.3601182,
+                            "power_w": 0.2875666267188
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.865225,
+                            "current_a": 3.19694,
+                            "power_w": 2.7660724115
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.300363,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.306773,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016150279332000003
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7967758,
+                            "current_a": 0.00323565,
+                            "power_w": 0.00257808761727
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.08664,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0012421574880000002
+                        }
+                    },
+                    "monitored_power_w": 3.9976450390405502,
+                    "core_rail_power_w": 2.7660724115,
+                    "external_5v_voltage_v": 5.10004
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.90789794921875,
+                    "used_ram_gib": 4.96142578125,
+                    "ram_utilization_percent": 63.047676664262276,
+                    "swap_used_gib": 0.464874267578125
+                },
+                "cpu_temperature_c": 60.6
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:09:02.446695+00:00",
+                "monotonic_seconds": 28142.380277213502,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.726687,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.304465,
+                            "current_a": 0.07319475,
+                            "power_w": 0.24186948955875
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.798289,
+                            "current_a": 0.1893304,
+                            "power_w": 0.3404707756856
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.104761,
+                            "current_a": 0.1141838,
+                            "power_w": 0.1261458090718
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6047613,
+                            "current_a": 0.0029412,
+                            "power_w": 0.00177872393556
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.101464,
+                            "current_a": 0.1990897,
+                            "power_w": 0.21929013732080002
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.7999992,
+                            "current_a": 0.3718293,
+                            "power_w": 0.29746314253656
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8654937,
+                            "current_a": 1.97353,
+                            "power_w": 1.708077781761
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.299447,
+                            "current_a": 0.0001221,
+                            "power_w": 0.00040286247870000003
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.304942,
+                            "current_a": 0.0006105,
+                            "power_w": 0.002017667091
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7970688,
+                            "current_a": 0.0031746,
+                            "power_w": 0.00253037461248
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.08798,
+                            "current_a": 0.0002442,
+                            "power_w": 0.001242484716
+                        }
+                    },
+                    "monitored_power_w": 2.9412892487682503,
+                    "core_rail_power_w": 1.708077781761,
+                    "external_5v_voltage_v": 5.09066
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.9088287353515625,
+                    "used_ram_gib": 4.9604949951171875,
+                    "ram_utilization_percent": 63.03584863221413,
+                    "swap_used_gib": 0.464874267578125
+                },
+                "cpu_temperature_c": 58.95
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:09:02.700565+00:00",
+                "monotonic_seconds": 28142.632750319,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.703488,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.312817,
+                            "current_a": 0.06343545,
+                            "power_w": 0.21015003716265002
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.796335,
+                            "current_a": 0.1873786,
+                            "power_w": 0.336594737431
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.100732,
+                            "current_a": 0.1102801,
+                            "power_w": 0.12138883503320001
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6040287,
+                            "current_a": 0.007353,
+                            "power_w": 0.0044414230311
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.100732,
+                            "current_a": 0.2020175,
+                            "power_w": 0.22236712681
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8029296,
+                            "current_a": 0.3503589,
+                            "power_w": 0.28131353143344
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8649564,
+                            "current_a": 3.6613,
+                            "power_w": 3.16686486732
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.300363,
+                            "current_a": 0.0,
+                            "power_w": 0.0
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.307689,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016154753076
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7970688,
+                            "current_a": 0.00311355,
+                            "power_w": 0.00248171356224
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.08128,
+                            "current_a": 0.0002442,
+                            "power_w": 0.001240848576
+                        }
+                    },
+                    "monitored_power_w": 4.34845859566723,
+                    "core_rail_power_w": 3.16686486732,
+                    "external_5v_voltage_v": 5.09066
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.9095306396484375,
+                    "used_ram_gib": 4.9597930908203125,
+                    "ram_utilization_percent": 63.02692913263684,
+                    "swap_used_gib": 0.464874267578125
+                },
+                "cpu_temperature_c": 61.15
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:09:02.954337+00:00",
+                "monotonic_seconds": 28142.8846999555,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.726687,
+                            "current_a": 0.00097593,
+                            "power_w": 0.00363698564391
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.306322,
+                            "current_a": 0.06343545,
+                            "power_w": 0.20973802391490004
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.796824,
+                            "current_a": 0.1873786,
+                            "power_w": 0.3366863655664
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.104028,
+                            "current_a": 0.2908272,
+                            "power_w": 0.3210813719616
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6036624,
+                            "current_a": 0.078432,
+                            "power_w": 0.047346449356800005
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.104394,
+                            "current_a": 0.1981138,
+                            "power_w": 0.21879569203720003
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8014644,
+                            "current_a": 0.3737812,
+                            "power_w": 0.29957232518927995
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8646878,
+                            "current_a": 4.14352,
+                            "power_w": 3.582851193056
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.299447,
+                            "current_a": 0.0001221,
+                            "power_w": 0.00040286247870000003
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.306773,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016150279332000003
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7967758,
+                            "current_a": 0.0032967,
+                            "power_w": 0.0026267307798600002
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.07994,
+                            "current_a": 0.0002442,
+                            "power_w": 0.001240521348
+                        }
+                    },
+                    "monitored_power_w": 5.02559354926585,
+                    "core_rail_power_w": 3.582851193056,
+                    "external_5v_voltage_v": 5.08798
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.9185638427734375,
+                    "used_ram_gib": 4.9507598876953125,
+                    "ram_utilization_percent": 62.91213905112037,
+                    "swap_used_gib": 0.464874267578125
+                },
+                "cpu_temperature_c": 61.15
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:09:03.204761+00:00",
+                "monotonic_seconds": 28143.134994480002,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.726687,
+                            "current_a": 0.00097593,
+                            "power_w": 0.00363698564391
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.315601,
+                            "current_a": 0.06343545,
+                            "power_w": 0.21032664145545002
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.809034,
+                            "current_a": 0.1942101,
+                            "power_w": 0.3513326740434
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.101464,
+                            "current_a": 0.1756674,
+                            "power_w": 0.1934913170736
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6054939,
+                            "current_a": 0.0088236,
+                            "power_w": 0.00534263597604
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.102929,
+                            "current_a": 0.1981138,
+                            "power_w": 0.21850545532020002
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8010981,
+                            "current_a": 0.3796368,
+                            "power_w": 0.30412631917008
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.866031,
+                            "current_a": 3.20587,
+                            "power_w": 2.77638280197
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.300363,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0008059486446
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.304942,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016141336728000002
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7967758,
+                            "current_a": 0.00311355,
+                            "power_w": 0.00248080129209
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.06922,
+                            "current_a": 0.0002442,
+                            "power_w": 0.0012379035240000001
+                        }
+                    },
+                    "monitored_power_w": 4.06928361778617,
+                    "core_rail_power_w": 2.77638280197,
+                    "external_5v_voltage_v": 5.10138
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.9185791015625,
+                    "used_ram_gib": 4.95074462890625,
+                    "ram_utilization_percent": 62.911945148955645,
+                    "swap_used_gib": 0.464874267578125
+                },
+                "cpu_temperature_c": 58.4
+            },
+            {
+                "timestamp_utc": "2026-11-25T17:09:03.449018+00:00",
+                "monotonic_seconds": 28143.382182021,
+                "power": {
+                    "measurement_scope": "monitored_pmic_rails",
+                    "whole_device_input_power": false,
+                    "rail_count": 12,
+                    "rails": {
+                        "3V7_WL_SW": {
+                            "voltage_v": 3.71184,
+                            "current_a": 0.00097593,
+                            "power_w": 0.0036224960112
+                        },
+                        "3V3_SYS": {
+                            "voltage_v": 3.316529,
+                            "current_a": 0.0683151,
+                            "power_w": 0.22656901028790002
+                        },
+                        "1V8_SYS": {
+                            "voltage_v": 1.805126,
+                            "current_a": 0.1922582,
+                            "power_w": 0.3470502755332
+                        },
+                        "DDR_VDD2": {
+                            "voltage_v": 1.10183,
+                            "current_a": 0.195186,
+                            "power_w": 0.21506179038
+                        },
+                        "DDR_VDDQ": {
+                            "voltage_v": 0.6051276,
+                            "current_a": 0.0102942,
+                            "power_w": 0.00622930453992
+                        },
+                        "1V1_SYS": {
+                            "voltage_v": 1.101098,
+                            "current_a": 0.2000657,
+                            "power_w": 0.22029194213859998
+                        },
+                        "0V8_SW": {
+                            "voltage_v": 0.8014644,
+                            "current_a": 0.3815886,
+                            "power_w": 0.30582967834583996
+                        },
+                        "VDD_CORE": {
+                            "voltage_v": 0.8671054,
+                            "current_a": 3.1255,
+                            "power_w": 2.7101379277000004
+                        },
+                        "3V3_DAC": {
+                            "voltage_v": 3.299447,
+                            "current_a": 0.0001221,
+                            "power_w": 0.00040286247870000003
+                        },
+                        "3V3_ADC": {
+                            "voltage_v": 3.306773,
+                            "current_a": 0.0004884,
+                            "power_w": 0.0016150279332000003
+                        },
+                        "0V8_AON": {
+                            "voltage_v": 0.7967758,
+                            "current_a": 0.0034188,
+                            "power_w": 0.00272401710504
+                        },
+                        "HDMI": {
+                            "voltage_v": 5.07994,
+                            "current_a": 0.0002442,
+                            "power_w": 0.001240521348
+                        }
+                    },
+                    "monitored_power_w": 4.0407748538016,
+                    "core_rail_power_w": 2.7101379277000004,
+                    "external_5v_voltage_v": 5.0786
+                },
+                "memory": {
+                    "total_ram_gib": 7.86932373046875,
+                    "available_ram_gib": 2.9174652099609375,
+                    "used_ram_gib": 4.9518585205078125,
+                    "ram_utilization_percent": 62.92610000698048,
+                    "swap_used_gib": 0.464874267578125
+                },
+                "cpu_temperature_c": 58.95
+            }
+        ],
+        "observation_duration_seconds": 9.298235762998956,
+        "sampling_error_count": 0,
+        "maximum_sample_gap_seconds": 0.25501246249768883,
+        "inspection_id": "PCB-20261125T170854753268Z",
+        "source_record_sha256": "0896ef80adf251a9bd68b5f6f2566e01af4d57fcc724312d7aecaa0b0f60ffe9",
+        "boot_id": "79865ab7-a136-4d55-88fd-9832f4018497",
+        "measurement_start_monotonic": 28134.226675833,
+        "measurement_end_monotonic": 28143.524911596,
+        "measurement_window": "Vision start to advisory report preparation",
+        "energy_definition": "Estimated energy over sampled interval only",
+        "attribution": "System-wide monitored rails; concurrent workloads included"
+    }
+}

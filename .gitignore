@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+dashboard_venv/
+.ipynb_checkpoints/
+
+# Credentials
+.env
+.env.*
+*.pem
+*.key
+*.token
+credentials.json
+secrets.json
+
+# Model binaries
+*.pt
+*.pth
+*.pte
+*.gguf
+*.safetensors
+*.onnx
+*.tflite
+tokenizer.model
+
+# Runtime databases
+*.sqlite
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.db
+
+# Runtime data
+*.log
+input/
+auto_inspections/
+advisories/
+logs/
+backups/
+
+# Archives
+*.tar
+*.tar.gz
+*.zip
+
+# Temporary files
+*.tmp
+.DS_Store
+
+# Additional generated runtime data
+hardware_benchmarks/
+offline_evidence/
+executorch_tests/
+dashboard_backups/
+deleted_records/
+reports/
+*.db-wal
+*.db-shm
+
+# Curated inspection evidence
+!results/**/*.log

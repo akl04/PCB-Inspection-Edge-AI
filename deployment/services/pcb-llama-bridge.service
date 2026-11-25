@@ -1,0 +1,22 @@
+[Unit]
+Description=PCB Automatic Llama Advisory Bridge
+Wants=pcb-yolo-watcher.service pcb-llama-server.service
+After=local-fs.target pcb-yolo-watcher.service pcb-llama-server.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=berry
+WorkingDirectory=/home/berry/pcb_inspection_final
+Environment=PYTHONUNBUFFERED=1
+ExecStartPre=/usr/bin/python3 -u /home/berry/pcb_inspection_final/wait_for_llama.py
+ExecStart=/usr/bin/python3 -u /home/berry/pcb_inspection_final/llama_bridge.py
+Restart=on-failure
+RestartSec=5
+TimeoutStartSec=210
+TimeoutStopSec=330
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

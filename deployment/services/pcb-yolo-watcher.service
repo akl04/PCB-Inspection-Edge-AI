@@ -1,0 +1,15 @@
+[Unit]
+Description=PCB Automatic YOLO Inspection Watcher
+After=local-fs.target
+
+[Service]
+Type=simple
+User=berry
+WorkingDirectory=/home/berry/pcb_ai
+ExecStart=/home/berry/pcb_ai/.venv/bin/python /home/berry/pcb_watcher_05s/watch_input.py
+Restart=on-failure
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

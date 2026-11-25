@@ -1,0 +1,11 @@
+{
+  "inspection_id": "PCB-20261125T170854753268Z",
+  "source_record_sha256": "0896ef80adf251a9bd68b5f6f2566e01af4d57fcc724312d7aecaa0b0f60ffe9",
+  "yolo_json_generation_ms": 0.2748,
+  "yolo_json_save_ms": 11.1059,
+  "yolo_total_processing_ms": 525.3955,
+  "yolo_record_completed_ns": 1795626534805269083,
+  "vision_started_monotonic": 28134.226675833,
+  "vision_finished_monotonic": 28134.752146841,
+  "hardware_boot_id": "79865ab7-a136-4d55-88fd-9832f4018497"
+}

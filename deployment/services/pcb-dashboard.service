@@ -1,0 +1,23 @@
+[Unit]
+Description=PCB Offline Inspection Dashboard
+Wants=pcb-yolo-watcher.service pcb-llama-server.service pcb-llama-bridge.service
+After=local-fs.target pcb-yolo-watcher.service pcb-llama-server.service pcb-llama-bridge.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=berry
+WorkingDirectory=/home/berry/pcb_inspection_final/dashboard
+Environment=PYTHONUNBUFFERED=1
+Environment=GRADIO_ANALYTICS_ENABLED=False
+Environment=HF_HUB_OFFLINE=1
+Environment=HF_HUB_DISABLE_TELEMETRY=1
+ExecStart=/home/berry/pcb_inspection_final/dashboard_venv/bin/python -u /home/berry/pcb_inspection_final/dashboard/app.py
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=60
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

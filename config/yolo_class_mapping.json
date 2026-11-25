@@ -1,0 +1,11 @@
+{
+    "SH": "Short Circuit",
+    "SP": "Spur",
+    "SC": "Spurious Copper",
+    "OP": "Open Circuit",
+    "MB": "Mouse Bite",
+    "HB": "Hole Breakout",
+    "CS": "Conductor Scratch",
+    "CFO": "Conductor Foreign Object",
+    "BMFO": "Base Material Foreign Object"
+}

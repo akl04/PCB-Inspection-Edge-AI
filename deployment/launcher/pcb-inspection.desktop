@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=PCB Inspection System
+Comment=Offline ARM AI PCB Inspection
+Exec=/home/berry/pcb_inspection_final/launcher/open_dashboard.sh
+Icon=/home/berry/pcb_inspection_final/launcher/icons/pcb_robot.svg
+Terminal=false
+Categories=Science;Engineering;
+StartupNotify=true

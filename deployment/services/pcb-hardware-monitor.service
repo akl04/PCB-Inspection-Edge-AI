@@ -1,0 +1,15 @@
+[Unit]
+Description=PCB Shared Hardware Monitor
+After=local-fs.target
+
+[Service]
+Type=simple
+User=berry
+WorkingDirectory=/home/berry/pcb_inspection_final
+ExecStart=/usr/bin/python3 -u /home/berry/pcb_inspection_final/shared_hardware_monitor.py
+Restart=on-failure
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

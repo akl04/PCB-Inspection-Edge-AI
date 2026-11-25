@@ -1,0 +1,20 @@
+# Final dataset configuration from notebook Cell 18.
+# Original Kaggle dataset path.
+
+path: /kaggle/input/datasets/aiswary4pramod/dataset/Data_YOLO
+
+train: images/train
+val: images/val
+
+nc: 9
+
+names:
+  - SH
+  - SP
+  - SC
+  - OP
+  - MB
+  - HB
+  - CS
+  - CFO
+  - BMFO

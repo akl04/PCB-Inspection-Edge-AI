@@ -1,0 +1,20 @@
+[Unit]
+Description=PCB Offline Llama ExecuTorch Advisory Server
+After=local-fs.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=berry
+WorkingDirectory=/home/berry/pcb_inspection_final
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 -u /home/berry/pcb_inspection_final/executorch_server.py --port 8091
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=100
+KillMode=control-group
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

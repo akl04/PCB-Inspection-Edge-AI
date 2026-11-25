@@ -1,0 +1,202 @@
+{
+  "platform": "Raspberry Pi 5, ARM CPU",
+  "vision_model": "YOLO26n",
+  "advisory_runtime": "ExecuTorch",
+  "test_method": "Sequential terminal submission through the production inspection pipeline",
+  "inspection_count": 4,
+  "total_detections": 11,
+  "llama_validated_count": 7,
+  "knowledge_base_fallback_count": 4,
+  "mean_complete_processing_seconds": 23.707698002250254,
+  "mean_yolo_inference_fps": 2.3772139877477447,
+  "hardware_measured_inspections": 4,
+  "hardware_partial_inspections": 0,
+  "limitations": [
+    "Four user-selected demonstration images.",
+    "Not an unbiased accuracy benchmark.",
+    "Validated selections are not engineering accuracy scores.",
+    "FPS represents reciprocal latency.",
+    "Power covers monitored PMIC rails only.",
+    "Hardware measurements include concurrent workloads.",
+    "Complete processing excludes upload wait and final report save.",
+    "Partial hardware measurements are retained and labelled.",
+    "Network isolation was not verified by this collector."
+  ],
+  "inspections": [
+    {
+      "test_case": "5799_t_029",
+      "inspection_id": "PCB-20261125T170753418228Z",
+      "total_detections": 1,
+      "llama_validated_count": 1,
+      "knowledge_base_fallback_count": 0,
+      "detected_classes": [
+        "SC"
+      ],
+      "hardware_status": "MEASURED",
+      "hardware_summary": {
+        "measurement_scope": "monitored_pmic_rails",
+        "whole_device_input_power": false,
+        "sample_count": 40,
+        "sampling_duration_seconds": 9.776038702999358,
+        "average_monitored_power_w": 3.835811721781307,
+        "peak_sampled_monitored_power_w": 7.168614727474011,
+        "minimum_sampled_monitored_power_w": 1.9358241084913002,
+        "estimated_monitored_energy_j": 37.49904384955266,
+        "estimated_monitored_energy_wh": 0.010416401069320184,
+        "peak_sampled_system_ram_used_gib": 5.4825439453125,
+        "minimum_sampled_available_ram_gib": 2.38677978515625,
+        "peak_sampled_cpu_temperature_c": 75.45,
+        "average_sampled_core_rail_power_w": 2.458670710122802
+      },
+      "sampling_coverage_percent": 98.44288369673889,
+      "performance": {
+        "yolo_inference_fps": 2.3408283426503416,
+        "complete_vision_fps": 2.0457059813169765,
+        "effective_system_fps": 0.10069813212435004,
+        "effective_inspections_per_minute": 6.041887927461002,
+        "fps_definition": "Reciprocal latency, not sustained throughput",
+        "vision_total_processing_ms": 488.8288,
+        "complete_processing_seconds": 9.930670797002676,
+        "complete_processing_ms": 9930.670797002676,
+        "measurement_start": "YOLO processing start",
+        "measurement_end": "Integrated report preparation before monitoring lookup and JSON publication",
+        "includes_upload_wait": false,
+        "includes_final_report_save": false
+      },
+      "collector_elapsed_seconds": 11.033326384000247
+    },
+    {
+      "test_case": "6118_b_010",
+      "inspection_id": "PCB-20261125T170811536237Z",
+      "total_detections": 4,
+      "llama_validated_count": 2,
+      "knowledge_base_fallback_count": 2,
+      "detected_classes": [
+        "CFO",
+        "MB",
+        "CFO",
+        "MB"
+      ],
+      "hardware_status": "MEASURED",
+      "hardware_summary": {
+        "measurement_scope": "monitored_pmic_rails",
+        "whole_device_input_power": false,
+        "sample_count": 138,
+        "sampling_duration_seconds": 34.324905740999384,
+        "average_monitored_power_w": 3.987710152303483,
+        "peak_sampled_monitored_power_w": 6.92507580186254,
+        "minimum_sampled_monitored_power_w": 1.83475533374064,
+        "estimated_monitored_energy_j": 136.87777510024335,
+        "estimated_monitored_energy_wh": 0.038021604194512046,
+        "peak_sampled_system_ram_used_gib": 5.0565032958984375,
+        "minimum_sampled_available_ram_gib": 2.8128204345703125,
+        "peak_sampled_cpu_temperature_c": 68.3,
+        "average_sampled_core_rail_power_w": 2.5897469802187896
+      },
+      "sampling_coverage_percent": 99.04753447221177,
+      "performance": {
+        "yolo_inference_fps": 2.696476880092334,
+        "complete_vision_fps": 2.393573351294708,
+        "effective_system_fps": 0.02885587952362661,
+        "effective_inspections_per_minute": 1.7313527714175967,
+        "fps_definition": "Reciprocal latency, not sustained throughput",
+        "vision_total_processing_ms": 417.7854,
+        "complete_processing_seconds": 34.65498250300152,
+        "complete_processing_ms": 34654.98250300152,
+        "measurement_start": "YOLO processing start",
+        "measurement_end": "Integrated report preparation before monitoring lookup and JSON publication",
+        "includes_upload_wait": false,
+        "includes_final_report_save": false
+      },
+      "collector_elapsed_seconds": 36.075218809000944
+    },
+    {
+      "test_case": "6417_b_001",
+      "inspection_id": "PCB-20261125T170854753268Z",
+      "total_detections": 1,
+      "llama_validated_count": 1,
+      "knowledge_base_fallback_count": 0,
+      "detected_classes": [
+        "SH"
+      ],
+      "hardware_status": "MEASURED",
+      "hardware_summary": {
+        "measurement_scope": "monitored_pmic_rails",
+        "whole_device_input_power": false,
+        "sample_count": 37,
+        "sampling_duration_seconds": 9.017729872997734,
+        "average_monitored_power_w": 3.7099930201213405,
+        "peak_sampled_monitored_power_w": 5.62088746410326,
+        "minimum_sampled_monitored_power_w": 1.83544534019453,
+        "estimated_monitored_energy_j": 33.455714886161296,
+        "estimated_monitored_energy_wh": 0.009293254135044804,
+        "peak_sampled_system_ram_used_gib": 4.9942169189453125,
+        "minimum_sampled_available_ram_gib": 2.8751068115234375,
+        "peak_sampled_cpu_temperature_c": 63.35,
+        "average_sampled_core_rail_power_w": 2.4083453665499714
+      },
+      "sampling_coverage_percent": 96.98323534538179,
+      "performance": {
+        "yolo_inference_fps": 2.1562437927881413,
+        "complete_vision_fps": 1.903328064286809,
+        "effective_system_fps": 0.10754728375240405,
+        "effective_inspections_per_minute": 6.452837025144244,
+        "fps_definition": "Reciprocal latency, not sustained throughput",
+        "vision_total_processing_ms": 525.3955,
+        "complete_processing_seconds": 9.298235762998956,
+        "complete_processing_ms": 9298.235762998956,
+        "measurement_start": "YOLO processing start",
+        "measurement_end": "Integrated report preparation before monitoring lookup and JSON publication",
+        "includes_upload_wait": false,
+        "includes_final_report_save": false
+      },
+      "collector_elapsed_seconds": 11.020585280002706
+    },
+    {
+      "test_case": "6445_b_001",
+      "inspection_id": "PCB-20261125T170912940963Z",
+      "total_detections": 5,
+      "llama_validated_count": 3,
+      "knowledge_base_fallback_count": 2,
+      "detected_classes": [
+        "CFO",
+        "CFO",
+        "MB",
+        "MB",
+        "CFO"
+      ],
+      "hardware_status": "MEASURED",
+      "hardware_summary": {
+        "measurement_scope": "monitored_pmic_rails",
+        "whole_device_input_power": false,
+        "sample_count": 163,
+        "sampling_duration_seconds": 40.60562849249982,
+        "average_monitored_power_w": 3.9527206148504415,
+        "peak_sampled_monitored_power_w": 7.39006285075307,
+        "minimum_sampled_monitored_power_w": 2.5290539662222002,
+        "estimated_monitored_energy_j": 160.50270482126248,
+        "estimated_monitored_energy_wh": 0.04458408467257291,
+        "peak_sampled_system_ram_used_gib": 5.035064697265625,
+        "minimum_sampled_available_ram_gib": 2.834259033203125,
+        "peak_sampled_cpu_temperature_c": 64.45,
+        "average_sampled_core_rail_power_w": 2.5757817226590376
+      },
+      "sampling_coverage_percent": 99.16654391676917,
+      "performance": {
+        "yolo_inference_fps": 2.3153069354601614,
+        "complete_vision_fps": 2.065851922213238,
+        "effective_system_fps": 0.024421871449443522,
+        "effective_inspections_per_minute": 1.4653122869666113,
+        "fps_definition": "Reciprocal latency, not sustained throughput",
+        "vision_total_processing_ms": 484.0618,
+        "complete_processing_seconds": 40.94690294599786,
+        "complete_processing_ms": 40946.90294599786,
+        "measurement_start": "YOLO processing start",
+        "measurement_end": "Integrated report preparation before monitoring lookup and JSON publication",
+        "includes_upload_wait": false,
+        "includes_final_report_save": false
+      },
+      "collector_elapsed_seconds": 42.101170406000165
+    }
+  ]
+}

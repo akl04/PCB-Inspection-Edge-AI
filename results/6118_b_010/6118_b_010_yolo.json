@@ -1,0 +1,81 @@
+{
+  "inspection_id": "PCB-20261125T170811536237Z",
+  "created_at_utc": "2026-11-25T17:08:11.560961+00:00",
+  "status": "INSPECTION_COMPLETE",
+  "source_image": "/home/berry/pcb_ai/input/6118_b_010_20261125T170810334557Z_5e1d8c38b4.jpg",
+  "annotated_image": "/home/berry/pcb_ai/auto_inspections/annotated_images/6118_b_010_20261125T170810334557Z_5e1d8c38b4_annotated.png",
+  "model_weights": "/home/berry/pcb_ai/models/best.pt",
+  "device": "cpu",
+  "image_width": 300,
+  "image_height": 300,
+  "confidence_threshold": 0.25,
+  "inference_elapsed_seconds": 0.378,
+  "yolo_preprocess_ms": 4.619826999260113,
+  "yolo_inference_ms": 370.85428300269996,
+  "yolo_postprocess_ms": 0.7474779995391145,
+  "total_detections": 4,
+  "detections": [
+    {
+      "detection_id": 1,
+      "class_id": 7,
+      "defect_class": "CFO",
+      "confidence": 0.821284,
+      "bounding_box_xyxy": [
+        108.96,
+        107.99,
+        182.86,
+        249.12
+      ],
+      "location": "center region",
+      "severity": "NOT_ASSESSED",
+      "verification_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "detection_id": 2,
+      "class_id": 4,
+      "defect_class": "MB",
+      "confidence": 0.578719,
+      "bounding_box_xyxy": [
+        133.51,
+        22.98,
+        167.94,
+        82.13
+      ],
+      "location": "top region",
+      "severity": "NOT_ASSESSED",
+      "verification_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "detection_id": 3,
+      "class_id": 7,
+      "defect_class": "CFO",
+      "confidence": 0.548857,
+      "bounding_box_xyxy": [
+        133.26,
+        0.26,
+        172.17,
+        16.14
+      ],
+      "location": "top region",
+      "severity": "NOT_ASSESSED",
+      "verification_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "detection_id": 4,
+      "class_id": 4,
+      "defect_class": "MB",
+      "confidence": 0.309076,
+      "bounding_box_xyxy": [
+        134.54,
+        59.32,
+        151.74,
+        81.87
+      ],
+      "location": "top region",
+      "severity": "NOT_ASSESSED",
+      "verification_status": "PENDING_HUMAN_REVIEW"
+    }
+  ],
+  "advisory_status": "NOT_GENERATED",
+  "yolo_json_generation_ms": 0.3579
+}

@@ -1,0 +1,137 @@
+{
+  "Short Circuit": {
+    "possible_causes": [
+      "Unintended copper bridging between adjacent conductors",
+      "Incomplete etching or conductive contamination"
+    ],
+    "potential_impact": [
+      "Unintended electrical connection between circuit nets",
+      "Possible excessive current, malfunction, or component damage"
+    ],
+    "corrective_action": [
+      "Inspect the suspected bridge against the PCB layout",
+      "Verify isolation between affected conductors",
+      "Assess approved rework or board rejection"
+    ]
+  },
+  "Spur": {
+    "possible_causes": [
+      "Incomplete removal of unwanted copper during etching",
+      "Photolithography or pattern-transfer irregularities"
+    ],
+    "potential_impact": [
+      "Reduced clearance between adjacent conductors",
+      "Possible short circuit if the protrusion contacts another conductor"
+    ],
+    "corrective_action": [
+      "Inspect the protrusion and adjacent conductor clearance",
+      "Compare the feature against the approved PCB layout",
+      "Assess approved copper-removal rework if necessary"
+    ]
+  },
+  "Spurious Copper": {
+    "possible_causes": [
+      "Incomplete copper etching",
+      "Unwanted copper retained during pattern transfer"
+    ],
+    "potential_impact": [
+      "Possible unintended conductive path",
+      "Reduced electrical clearance or short-circuit risk"
+    ],
+    "corrective_action": [
+      "Compare the copper feature against the PCB layout",
+      "Check its proximity and electrical relationship to nearby conductors",
+      "Assess approved removal or board rejection"
+    ]
+  },
+  "Open Circuit": {
+    "possible_causes": [
+      "Excessive etching or incomplete conductor formation",
+      "Mechanical damage interrupting a copper trace"
+    ],
+    "potential_impact": [
+      "Loss of electrical continuity",
+      "Possible malfunction of the connected circuit"
+    ],
+    "corrective_action": [
+      "Inspect the affected trace against the PCB layout",
+      "Verify continuity using an appropriate electrical test",
+      "Assess approved conductor repair or board rejection"
+    ]
+  },
+  "Mouse Bite": {
+    "possible_causes": [
+      "Localized over-etching along a conductor edge",
+      "Irregular copper pattern transfer"
+    ],
+    "potential_impact": [
+      "Reduced conductor width at the affected region",
+      "Possible increased resistance or reduced current-carrying margin"
+    ],
+    "corrective_action": [
+      "Inspect the conductor-edge indentation",
+      "Compare remaining conductor width with design requirements",
+      "Assess acceptance or approved rework using applicable criteria"
+    ]
+  },
+  "Hole Breakout": {
+    "possible_causes": [
+      "Drill misregistration relative to the copper pad",
+      "Insufficient annular ring or manufacturing alignment variation"
+    ],
+    "potential_impact": [
+      "Reduced or interrupted annular-ring integrity",
+      "Possible reduction in connection reliability"
+    ],
+    "corrective_action": [
+      "Inspect hole-to-pad alignment and remaining annular ring",
+      "Compare the condition with applicable fabrication acceptance criteria",
+      "Assess electrical testing, approved rework, or rejection"
+    ]
+  },
+  "Conductor Scratch": {
+    "possible_causes": [
+      "Mechanical abrasion during handling or fabrication",
+      "Contact with tools or equipment"
+    ],
+    "potential_impact": [
+      "Possible reduction in conductor cross-section",
+      "Potential loss of continuity or long-term reliability"
+    ],
+    "corrective_action": [
+      "Inspect scratch depth and affected conductor width",
+      "Verify continuity where appropriate",
+      "Assess acceptance or approved repair against applicable criteria"
+    ]
+  },
+  "Conductor Foreign Object": {
+    "possible_causes": [
+      "Particle contamination during manufacturing",
+      "Residual processing material deposited on a conductor"
+    ],
+    "potential_impact": [
+      "Possible electrical bridging if the object is conductive",
+      "Potential interference with coating, soldering, or reliability"
+    ],
+    "corrective_action": [
+      "Inspect and identify the foreign material",
+      "Assess whether it affects adjacent conductors or processing",
+      "Use an approved cleaning or disposition procedure"
+    ]
+  },
+  "Base Material Foreign Object": {
+    "possible_causes": [
+      "Foreign particle inclusion during laminate processing",
+      "Contamination during PCB manufacturing or handling"
+    ],
+    "potential_impact": [
+      "Possible reduction in insulation reliability",
+      "Potential localized manufacturing or assembly issues"
+    ],
+    "corrective_action": [
+      "Inspect the foreign object and surrounding base material",
+      "Assess its location, size, and material characteristics",
+      "Determine acceptance or rejection using applicable criteria"
+    ]
+  }
+}

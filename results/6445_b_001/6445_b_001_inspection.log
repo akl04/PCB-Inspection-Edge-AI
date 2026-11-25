@@ -1,0 +1,17 @@
+Inspection ID: PCB-20261125T170912940963Z
+Input image: 6445_b_001.jpg
+Started UTC: 2026-11-25T17:09:11.523180+00:00
+Finished UTC: 2026-11-25T17:09:53.624350+00:00
+Collector elapsed seconds: 42.101
+Detections: 5
+Hardware status: MEASURED
+Journal return code: 0
+Matching journal entries: 5
+
+Matching production service journal entries:
+
+2026-11-25T22:39:12+05:30 raspberry python[82184]: 2026-11-25 22:39:12,498 INFO Inspecting 6445_b_001_20261125T170911522978Z_b24a8d1ca2.jpg
+2026-11-25T22:39:12+05:30 raspberry python[82184]: 2026-11-25 22:39:12,998 INFO Complete: 6445_b_001_20261125T170911522978Z_b24a8d1ca2.jpg (5 detections) /home/berry/pcb_ai/auto_inspections/inspection_records/6445_b_001_20261125T170911522978Z_b24a8d1ca2_inspection.json
+2026-11-25T22:39:13+05:30 raspberry python3[82189]: 2026-11-25 22:39:13,047 | INFO | Processing inspection: PCB-20261125T170912940963Z
+2026-11-25T22:39:13+05:30 raspberry python3[82189]: 2026-11-25 22:39:13,047 | INFO | Source record: 6445_b_001_20261125T170911522978Z_b24a8d1ca2_inspection.json
+2026-11-25T22:39:53+05:30 raspberry python3[82189]: 2026-11-25 22:39:53,530 | INFO | Integrated report: /home/berry/pcb_inspection_final/advisories/PCB-20261125T170912940963Z_integrated.json

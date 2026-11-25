@@ -1,0 +1,14 @@
+{
+  "yolo_inference_fps": 2.3153069354601614,
+  "complete_vision_fps": 2.065851922213238,
+  "effective_system_fps": 0.024421871449443522,
+  "effective_inspections_per_minute": 1.4653122869666113,
+  "fps_definition": "Reciprocal latency, not sustained throughput",
+  "vision_total_processing_ms": 484.0618,
+  "complete_processing_seconds": 40.94690294599786,
+  "complete_processing_ms": 40946.90294599786,
+  "measurement_start": "YOLO processing start",
+  "measurement_end": "Integrated report preparation before monitoring lookup and JSON publication",
+  "includes_upload_wait": false,
+  "includes_final_report_save": false
+}
