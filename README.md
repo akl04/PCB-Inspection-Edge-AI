@@ -241,3 +241,7 @@ See [YOLO26n Training](training/vision/README.md)
 for the original training notebook and dataset configuration.
 
 <!-- FINAL_BENCHMARK_END -->
+
+## Final Project Report
+
+[Final Project Report](docs/Intelligent_PCB_Defect_Detection_and_Advisory_System_Final_Report.pdf)
